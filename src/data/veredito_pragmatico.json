@@ -1,0 +1,39 @@
+{
+  "resumo_executivo": "A gestão federal (Lula 3) demonstra um desempenho materialmente dicotômico: de um lado, obteve vitórias expressivas na economia real da base (desemprego em mínimas históricas, recuperação do salário mínimo e retirada do país do mapa da fome); de outro lado, enfrenta um nó estrutural de sustentabilidade fiscal decorrente de taxas de juros altíssimas, dependência de elevação da carga tributária e total subserviência orçamentária ao Congresso Nacional.",
+  "pontos_positivos": [
+    {
+      "titulo": "Recuperação Histórica do Emprego e Renda da Base",
+      "detalhe": "Taxa de desocupação despencou para 6,4% com mais de 102 milhões de brasileiros ocupados e ganho real sistemático no poder de compra do salário mínimo."
+    },
+    {
+      "titulo": "Saída Rápida da Insegurança Alimentar Extrema",
+      "detalhe": "Mais de 24 milhões de brasileiros saíram da condição de fome severa com a reconstrução do Bolsa Família e o estímulo às compras da agricultura familiar."
+    },
+    {
+      "titulo": "Conquista Histórica da Reforma Tributária do Consumo",
+      "detalhe": "Aprovação da EC 132/2023, destravando o mais complexo emaranhado tributário do planeta após 35 anos de tentativas frustradas de governos anteriores."
+    },
+    {
+      "titulo": "Recuperação do Combate ao Desmatamento Amazônico",
+      "detalhe": "Queda de 50% nos alertas do INPE com retorno da fiscalização rigorosa do IBAMA e destravamento de fundos de cooperação climática global."
+    }
+  ],
+  "gargalos_criticos": [
+    {
+      "titulo": "O Dreno Estratosférico de Juros aos Rentistas",
+      "detalhe": "O Brasil gasta quase R$ 750 bilhões por ano apenas pagando juros da dívida aos bancos e investidores de títulos públicos. Isso representa 9 vezes todo o investimento em obras do país."
+    },
+    {
+      "titulo": "Ajuste Fiscal Focado em Arrecadar Mais (Não em Cortar Privilégios)",
+      "detalhe": "A busca pelo equilíbrio das contas foca em tributar importações populares, apostas e consumo, enquanto os R$ 500 bilhões de renúncias fiscais para grandes grupos empresariais seguem intocados."
+    },
+    {
+      "titulo": "Sequestro Orçamentário pelas Emendas do Centrão",
+      "detalhe": "Mais de R$ 50 bilhões por ano são pulverizados sem projeto nacional unificado para alimentar bases eleitorais de parlamentares por meio de Emendas Pix de baixíssima transparência."
+    },
+    {
+      "titulo": "Crescimento da Dívida Bruta e Alerta Fiscal",
+      "detalhe": "A dívida pública subiu de 71,7% para ~78% do PIB, elevando a desconfiança de investidores e retroalimentando juros altos no Banco Central."
+    }
+  ]
+}

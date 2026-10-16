@@ -1,0 +1,59 @@
+{
+  "contexto": "O Brasil se tornou a democracia onde o Poder Legislativo (Câmara e Senado) mais controla a alocação do orçamento discricionário de investimentos no mundo, superando os parlamentos dos EUA, Alemanha e França.",
+  "serie_historica": [
+    {
+      "ano": "2014",
+      "valor_bi": 9.6,
+      "rotulo": "Emendas Individuais"
+    },
+    {
+      "ano": "2016",
+      "valor_bi": 11.2,
+      "rotulo": "Início da Impositividade"
+    },
+    {
+      "ano": "2018",
+      "valor_bi": 11.4,
+      "rotulo": "Governo Temer"
+    },
+    {
+      "ano": "2020",
+      "valor_bi": 25.1,
+      "rotulo": "Criação do Orçamento Secreto (RP9)"
+    },
+    {
+      "ano": "2022",
+      "valor_bi": 35.8,
+      "rotulo": "Pico do Orçamento Secreto"
+    },
+    {
+      "ano": "2023",
+      "valor_bi": 37.3,
+      "rotulo": "Fim do RP9 e migração para Emendas de Comissão"
+    },
+    {
+      "ano": "2024",
+      "valor_bi": 49.2,
+      "rotulo": "Explosão das Emendas Pix"
+    },
+    {
+      "ano": "2025",
+      "valor_bi": 53.2,
+      "rotulo": "Recorde Histórico (Supremo suspende repasses)"
+    }
+  ],
+  "problemas_materiais": [
+    {
+      "titulo": "Pulverização sem Planejamento Nacional",
+      "descricao": "Em vez de construir ferrovias, hospitais regionais de câncer ou portos estratégicos, o dinheiro é fatiado em dezenas de milhares de micro-repasses eleitorais (ex: praças superfaturadas, tratores e shows sertanejos)."
+    },
+    {
+      "titulo": "Falta de Rastreabilidade (Emendas Pix)",
+      "descricao": "Transferências diretas para o caixa livre de prefeituras aliadas sem necessidade de convênio formal, projeto de engenharia prévio ou fiscalização do TCU na largada."
+    },
+    {
+      "titulo": "Perda de Governabilidade do Executivo",
+      "descricao": "Qualquer presidente da República (seja Lula, Bolsonaro ou outro) precisa ceder dezenas de bilhões de reais aos presidentes da Câmara e do Senado para aprovar qualquer lei ordinária."
+    }
+  ]
+}

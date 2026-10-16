@@ -1,0 +1,71 @@
+{
+  "indicadores_sociais": [
+    {
+      "indicador": "Salário Mínimo Nominal",
+      "valor_2022": "R$ 1.212,00",
+      "valor_atual": "R$ 1.518,00",
+      "variacao_real": "+8,2% acima da inflação",
+      "impacto": "Retomada da política constitucional de ganho real (inflação + PIB de 2 anos anteriores)."
+    },
+    {
+      "indicador": "Massa Salarial Habitual (IBGE)",
+      "valor_2022": "R$ 278 Bilhões/mês",
+      "valor_atual": "R$ 326 Bilhões/mês",
+      "variacao_real": "+11,4% de ganho real",
+      "impacto": "Recorde histórico de trabalhadores com carteira assinada gerando circulação de dinheiro no comércio."
+    },
+    {
+      "indicador": "Insegurança Alimentar Grave (Fome)",
+      "valor_2022": "33,1 Milhões de pessoas",
+      "valor_atual": "8,7 Milhões de pessoas",
+      "variacao_real": "24,4 Milhões saíram da fome severa",
+      "impacto": "Relatório oficial da FAO/ONU confirmando a retirada do país da trajetória do Mapa da Fome."
+    },
+    {
+      "indicador": "Poder de Compra da Cesta Básica (DIEESE)",
+      "valor_2022": "59,7% do salário mínimo",
+      "valor_atual": "52,4% do salário mínimo",
+      "variacao_real": "Melhora de 7,3 p.p.",
+      "impacto": "O trabalhador precisa gastar menos horas de trabalho para comprar os 13 alimentos essenciais."
+    },
+    {
+      "indicador": "Desmatamento na Amazônia (INPE/DETER)",
+      "valor_2022": "10.278 km²",
+      "valor_atual": "5.140 km²",
+      "variacao_real": "Queda de 50,0%",
+      "impacto": "Retomada da fiscalização do IBAMA e do Fundo Amazônia com cooperação internacional."
+    }
+  ],
+  "inflacao_detalhada": [
+    {
+      "item": "IPCA Geral Acumulado 12m",
+      "valor_2022": "5,79%",
+      "valor_atual": "4,12%",
+      "status": "Dentro da Meta do CMN"
+    },
+    {
+      "item": "Carnes (Cortes Bovinos Gerais)",
+      "valor_2022": "+1,84%",
+      "valor_atual": "-6,40%",
+      "status": "Queda de Preço no Açougue"
+    },
+    {
+      "item": "Combustíveis (Gasolina)",
+      "valor_2022": "-25,8% (corte ICMS)",
+      "valor_atual": "+4,50%",
+      "status": "Estabilidade pós reoneração"
+    },
+    {
+      "item": "Arroz e Grãos",
+      "valor_2022": "+3,20%",
+      "valor_atual": "+16,80%",
+      "status": "Pressionado por eventos climáticos (RS)"
+    },
+    {
+      "item": "Azeite de Oliva",
+      "valor_2022": "+12,1%",
+      "valor_atual": "+32,40%",
+      "status": "Crise climática europeia e importação"
+    }
+  ]
+}

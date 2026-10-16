@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "periodo": "2023 - 2026",
+    "gestao": "Governo Lula 3",
+    "atualizado_em": "Outubro/2026",
+    "fontes": [
+      "Tesouro Nacional (Relatório do Tesouro Nacional - RTN)",
+      "Banco Central do Brasil (Sistema Gerenciador de Séries Temporais - SGS)",
+      "Ministério da Fazenda (Relatórios de Avaliação de Receitas e Despesas Primárias)"
+    ]
+  },
+  "kpis_principais": [
+    {
+      "id": "orcamento_total",
+      "titulo": "Orçamento Geral da União",
+      "valor": "R$ 5,5 Trilhões",
+      "subtexto": "Volume total do Orçamento Federal anual (fiscal + seguridade + refinanciamento)",
+      "icone": "Landmark",
+      "destaque": "neutral"
+    },
+    {
+      "id": "desemprego_historico",
+      "titulo": "Taxa de Desemprego (IBGE)",
+      "valor": "6,4%",
+      "subtexto": "Menor nível em quase uma década (queda de 7,9% em 2022 para 6,4%)",
+      "icone": "TrendingDown",
+      "destaque": "positive"
+    },
+    {
+      "id": "juros_divida",
+      "titulo": "Custo Anual com Juros da Dívida",
+      "valor": "R$ 748 Bilhões",
+      "subtexto": "Transferência anual para bancos e detentores de títulos públicos (Selic média)",
+      "icone": "AlertTriangle",
+      "destaque": "negative"
+    },
+    {
+      "id": "emendas_congresso",
+      "titulo": "Emendas Parlamentares (Congresso)",
+      "valor": "R$ 53,2 Bilhões",
+      "subtexto": "Recorde histórico: Congresso controla mais de 20% do orçamento discricionário",
+      "icone": "Lock",
+      "destaque": "warning"
+    }
+  ],
+  "evolucao_fiscal": [
+    {
+      "ano": "2020",
+      "presidente": "Bolsonaro",
+      "resultado_primario": -743.1,
+      "divida_pib": 86.9,
+      "selic": 2.0,
+      "investimento_real": 54.3,
+      "desemprego": 13.5
+    },
+    {
+      "ano": "2021",
+      "presidente": "Bolsonaro",
+      "resultado_primario": -35.1,
+      "divida_pib": 78.3,
+      "selic": 9.25,
+      "investimento_real": 48.1,
+      "desemprego": 11.1
+    },
+    {
+      "ano": "2022",
+      "presidente": "Bolsonaro",
+      "resultado_primario": 54.1,
+      "divida_pib": 71.7,
+      "selic": 13.75,
+      "investimento_real": 45.6,
+      "desemprego": 7.9
+    },
+    {
+      "ano": "2023",
+      "presidente": "Lula 3",
+      "resultado_primario": -230.5,
+      "divida_pib": 74.4,
+      "selic": 11.75,
+      "investimento_real": 72.8,
+      "desemprego": 7.4,
+      "nota": "Déficit ampliado por quitação de R$ 92,4 bi de precatórios atrasados e compensação do ICMS"
+    },
+    {
+      "ano": "2024",
+      "presidente": "Lula 3",
+      "resultado_primario": -28.8,
+      "divida_pib": 77.8,
+      "selic": 11.25,
+      "investimento_real": 78.4,
+      "desemprego": 6.6,
+      "nota": "Dentro da margem de tolerância do Arcabouço Fiscal (0% ± 0,25% do PIB)"
+    },
+    {
+      "ano": "2025",
+      "presidente": "Lula 3",
+      "resultado_primario": -15.2,
+      "divida_pib": 78.6,
+      "selic": 12.0,
+      "investimento_real": 84.1,
+      "desemprego": 6.4,
+      "nota": "Esforço de arrecadação com offshores, apostas bets e subvenções fiscais"
+    }
+  ],
+  "divisao_orcamentaria": [
+    {
+      "area": "Previdência Social (INSS + RPPS)",
+      "valor_bi": 985.0,
+      "percentual": 35.8,
+      "tipo": "Obrigatória"
+    },
+    {
+      "area": "Juros e Amortização da Dívida Pública",
+      "valor_bi": 748.0,
+      "percentual": 27.2,
+      "tipo": "Financeira"
+    },
+    {
+      "area": "Pessoal e Encargos da União",
+      "valor_bi": 382.0,
+      "percentual": 13.9,
+      "tipo": "Obrigatória"
+    },
+    {
+      "area": "Saúde Pública (SUS)",
+      "valor_bi": 231.0,
+      "percentual": 8.4,
+      "tipo": "Mínimo Constitucional"
+    },
+    {
+      "area": "Educação Federal (FUNDEB / Universidades)",
+      "valor_bi": 182.0,
+      "percentual": 6.6,
+      "tipo": "Mínimo Constitucional"
+    },
+    {
+      "area": "Bolsa Família & Benefícios Sociais",
+      "valor_bi": 169.0,
+      "percentual": 6.1,
+      "tipo": "Transferência de Renda"
+    },
+    {
+      "area": "Emendas Parlamentares (Centrão/Congresso)",
+      "valor_bi": 53.2,
+      "percentual": 1.9,
+      "tipo": "Impositiva / Discricionária"
+    },
+    {
+      "area": "Investimentos Públicos em Obras e Infraestrutura",
+      "valor_bi": 84.1,
+      "percentual": 3.1,
+      "tipo": "Investimento Real"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "titulo": "A Casa da República: Se o Brasil Fosse uma Família com Renda de R$ 10.000",
+  "analogia": "Para entender para onde vai o dinheiro dos seus impostos sem jargões contábeis da Esplanada dos Ministérios, imagine que toda a riqueza recolhida pelo Governo Federal é o salário mensal de uma família de trabalhadores:",
+  "itens": [
+    {
+      "titulo": "Sustento dos Avós e Aposentados da Família",
+      "icone": "HeartHandshake",
+      "valor": "R$ 3.580",
+      "percentual": "35,8%",
+      "descricao": "Previdência Social (INSS) e pensões pagas todo mês a mais de 39 milhões de beneficiários em todo o país.",
+      "cor": "cyan"
+    },
+    {
+      "titulo": "Juros Pagos ao Gerente do Banco (Dívida Pública)",
+      "icone": "CreditCard",
+      "valor": "R$ 2.720",
+      "percentual": "27,2%",
+      "descricao": "Juros pagos para rolar a dívida da casa com os bancos e fundos de investimento. É o maior ralo de dinheiro vivo do Brasil.",
+      "cor": "red"
+    },
+    {
+      "titulo": "Salário dos Filhos que Cuidam da Casa",
+      "icone": "Users",
+      "valor": "R$ 1.390",
+      "percentual": "13,9%",
+      "descricao": "Folha de pagamento de professores universitários, médicos federais, policiais, auditores e também dos juízes e militares.",
+      "cor": "slate"
+    },
+    {
+      "titulo": "Remédio e Posto de Saúde da Família (SUS)",
+      "icone": "Activity",
+      "valor": "R$ 840",
+      "percentual": "8,4%",
+      "descricao": "Repasses para hospitais, vacinas, cirurgias de alta complexidade e atendimento gratuito para 190 milhões de pessoas.",
+      "cor": "emerald"
+    },
+    {
+      "titulo": "Educação dos Filhos e Netos",
+      "icone": "GraduationCap",
+      "valor": "R$ 660",
+      "percentual": "6,6%",
+      "descricao": "Custeio de colégios federais, universidades, institutos federais de tecnologia e bolsas de pesquisa científica.",
+      "cor": "blue"
+    },
+    {
+      "titulo": "Prato de Comida dos que Estão Desempregados",
+      "icone": "ShoppingBag",
+      "valor": "R$ 610",
+      "percentual": "6,1%",
+      "descricao": "Bolsa Família e Auxílio Gás garantindo a subsistência básica das famílias mais vulneráveis para não voltarem à fome.",
+      "cor": "purple"
+    },
+    {
+      "titulo": "Mesada dos Tios do Congresso (Emendas)",
+      "icone": "Coins",
+      "valor": "R$ 190",
+      "percentual": "1,9%",
+      "descricao": "Dinheiro entregue aos deputados e senadores para mandarem para suas bases eleitorais sem projeto nacional consolidado.",
+      "cor": "amber"
+    },
+    {
+      "titulo": "Reforma do Telhado e Piso da Casa (Investimentos)",
+      "icone": "Hammer",
+      "valor": "R$ 310",
+      "percentual": "3,1%",
+      "descricao": "O que sobra no final de tudo para duplicar rodovias, ferrovias, saneamento e infraestrutura produtiva.",
+      "cor": "emerald"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "noticia_1",
+    "veiculo": "G1 / TV Globo",
+    "tipo_veiculo": "Grande Mídia Geral",
+    "titulo": "Desemprego cai para 6,4% no trimestre e atinge menor taxa para o período na história da PNAD",
+    "data": "Outubro/2024",
+    "polaridade": "Positiva",
+    "resumo": "População ocupada bate recorde de 102,5 milhões de pessoas e rendimento médio real dos trabalhadores tem alta de 5,8%.",
+    "link": "https://g1.globo.com/economia/noticia"
+  },
+  {
+    "id": "noticia_2",
+    "veiculo": "O Estado de S. Paulo (Estadão)",
+    "tipo_veiculo": "Centro-Direita Econômica",
+    "titulo": "Dívida pública bruta sobe para 78% do PIB e acende alerta vermelho no mercado sobre o arcabouço fiscal",
+    "data": "Novembro/2024",
+    "polaridade": "Crítica",
+    "resumo": "Economistas alertam que o governo confia excessivamente em aumento de arrecadação em vez de conter o crescimento estrutural de despesas obrigatórias.",
+    "link": "https://www.estadao.com.br/economia"
+  },
+  {
+    "id": "noticia_3",
+    "veiculo": "Poder360",
+    "tipo_veiculo": "Jornalismo Político de Brasília",
+    "titulo": "Dino mantém suspensão de emendas Pix e exige que Congresso cumpra regras de transparência",
+    "data": "Agosto/2024",
+    "polaridade": "Neutro / Investigativo",
+    "resumo": "Decisão do STF paralisou repasses bilionários negociados por Arthur Lira e Rodrigo Pacheco até que planos de trabalho e destinatários finais sejam identificados.",
+    "link": "https://www.poder360.com.br/brasil"
+  },
+  {
+    "id": "noticia_4",
+    "veiculo": "Folha de S. Paulo",
+    "tipo_veiculo": "Grande Mídia Tradicional",
+    "titulo": "Congresso conclui votação da regulamentação da Reforma Tributária após décadas de impasse",
+    "data": "Dezembro/2024",
+    "polaridade": "Positiva / Estrutural",
+    "resumo": "Novo sistema simplifica tributos sobre o consumo, acaba com a guerra fiscal federativa e zera impostos de itens básicos da cesta de alimentos.",
+    "link": "https://www1.folha.uol.com.br/mercado"
+  },
+  {
+    "id": "noticia_5",
+    "veiculo": "Valor Econômico",
+    "tipo_veiculo": "Financeiro / Corporativo",
+    "titulo": "Banco Central mantém Selic em dois dígitos com pressão de juros internacionais e incerteza fiscal",
+    "data": "2024/2025",
+    "polaridade": "Crítica / Alerta",
+    "resumo": "Custo da dívida pública pressiona as contas da União em mais de R$ 700 bilhões anuais, reduzindo o espaço de manobra para investimentos produtivos.",
+    "link": "https://valor.globo.com/financas"
+  },
+  {
+    "id": "noticia_6",
+    "veiculo": "CartaCapital",
+    "tipo_veiculo": "Centro-Esquerda / Progressista",
+    "titulo": "Brasil retira 24 milhões de pessoas da fome e programa de valorização do salário mínimo impulsiona o consumo",
+    "data": "Julho/2024",
+    "polaridade": "Positiva",
+    "resumo": "Relatório da ONU atesta eficácia da recomposição do Bolsa Família e aumento real do piso salarial nacional nas periferias brasileiras.",
+    "link": "https://www.cartacapital.com.br/sociedade"
+  }
+]

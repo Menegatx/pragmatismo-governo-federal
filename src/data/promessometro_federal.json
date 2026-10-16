@@ -1,0 +1,78 @@
+{
+  "total_metas_analisadas": 8,
+  "percentual_cumprimento_medio": 62.5,
+  "metas": [
+    {
+      "id": "ir_5000",
+      "titulo": "Isenção do Imposto de Renda para quem ganha até R$ 5.000",
+      "promessa": "Prometido formalmente na campanha eleitoral de 2022 como medida central de justiça tributária.",
+      "realidade_auditada": "Faixa de isenção subiu de R$ 1.903 para R$ 2.640 (2023) e para R$ 2.824 (2024) com desconto simplificado até 2 salários mínimos. O projeto da isenção completa de R$ 5.000 foi estruturado para compensação fiscal em alta renda a partir de 2026.",
+      "status": "Em Andamento (Parcial)",
+      "percentual": 50,
+      "cor": "amber"
+    },
+    {
+      "id": "salario_minimo",
+      "titulo": "Valorização Real do Salário Mínimo",
+      "promessa": "Aumento anual do salário mínimo acima da inflação, vinculado ao crescimento econômico.",
+      "realidade_auditada": "Cumprida integralmente com a aprovação da Lei 14.663/2023: reajuste pela inflação (INPC) + variação positiva do PIB consolidado de 2 anos anteriores.",
+      "status": "Cumprida",
+      "percentual": 100,
+      "cor": "emerald"
+    },
+    {
+      "id": "reforma_tributaria",
+      "titulo": "Aprovação da Reforma Tributária sobre o Consumo",
+      "promessa": "Simplificar impostos, acabar com a guerra fiscal e instituir cashback para a população de baixa renda.",
+      "realidade_auditada": "Promulgação histórica da Emenda Constitucional 132/2023 após 35 anos de tentativas frustradas no Congresso. Unificação de 5 tributos em IVA Dual (IBS e CBS) e cesta básica nacional zerada.",
+      "status": "Cumprida / Em Regulamentação",
+      "percentual": 90,
+      "cor": "emerald"
+    },
+    {
+      "id": "desenrola_brasil",
+      "titulo": "Programa de Renegociação de Dívidas das Famílias",
+      "promessa": "Limpar o nome de trabalhadores endividados e frear os juros abusivos do rotativo do cartão.",
+      "realidade_auditada": "Programa Desenrola beneficiou mais de 15 milhões de brasileiros, renegociando R$ 53 bilhões em dívidas com descontos médios de 85% e teto de juros de 100% no rotativo.",
+      "status": "Cumprida",
+      "percentual": 100,
+      "cor": "emerald"
+    },
+    {
+      "id": "novo_pac",
+      "titulo": "Novo PAC (Programa de Aceleração do Crescimento)",
+      "promessa": "Retomar obras paradas e investir R$ 1,7 trilhão em infraestrutura energética, logística e cidades.",
+      "realidade_auditada": "Retomada de obras em andamento, mas o ritmo de desembolso financeiro federal efetivo atingiu cerca de 38% do cronograma inicial devido a restrições fiscais e licitatórias.",
+      "status": "Execução Moderada",
+      "percentual": 45,
+      "cor": "amber"
+    },
+    {
+      "id": "desmatamento",
+      "titulo": "Desmatamento Zero na Amazônia e Transição Ecológica",
+      "promessa": "Combater garimpo ilegal, zerar desmatamento até 2030 e fortalecer órgãos de fiscalização ambiental.",
+      "realidade_auditada": "Queda de 50% nos alertas do INPE na Amazônia e expulsão de invasores em terras indígenas (Yanomami). Por outro lado, recorde de queimadas históricas no Pantanal e Cerrado em 2024 evidenciou gargalos de contingência climática.",
+      "status": "Parcial com Alertas",
+      "percentual": 65,
+      "cor": "amber"
+    },
+    {
+      "id": "bolsa_familia",
+      "titulo": "Recriação do Bolsa Família com Foco nas Crianças",
+      "promessa": "Garantir R$ 600 de piso e adicionais para mães solo e primeira infância.",
+      "realidade_auditada": "Implantado com pagamento médio de R$ 680 por família, adicionais de R$ 150 por criança até 6 anos e R$ 50 para gestantes/jovens, condicionado à vacinação e frequência escolar.",
+      "status": "Cumprida",
+      "percentual": 100,
+      "cor": "emerald"
+    },
+    {
+      "id": "corte_privilegios",
+      "titulo": "Corte de Privilégios da Alta Burocracia e Gastos Tributários",
+      "promessa": "Enxugar incentivos fiscais a grandes corporações e limitar super-salários do funcionalismo de topo.",
+      "realidade_auditada": "Grave gargalo: gastos tributários (isenções a setores de elite) ultrapassam R$ 500 bilhões/ano e o Congresso blindou benefícios de categorias de topo (militares, judiciário e cartórios).",
+      "status": "Não Cumprida / Travada",
+      "percentual": 20,
+      "cor": "red"
+    }
+  ]
+}
