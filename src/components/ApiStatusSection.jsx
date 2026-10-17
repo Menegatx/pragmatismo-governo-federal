@@ -144,10 +144,10 @@ export default function ApiStatusSection() {
             <a
               href="/dossie-auditoria-governo-federal.pdf"
               download="Dossie-Auditoria-Governo-Federal-Lula3.pdf"
-              className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-black text-xs sm:text-sm shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+              className="w-full py-3 sm:py-3.5 px-3 sm:px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-black text-xs sm:text-sm shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98] text-center"
             >
               <Download className="w-4 h-4 stroke-[2.5]" />
-              <span>Baixar Dossiê Federal Oficial (PDF - 8 Páginas)</span>
+              <span>Baixar Dossiê Federal (PDF - 8 Páginas)</span>
             </a>
             <p className="text-center text-[10px] text-slate-500 mt-2">
               Arquivo em PDF de alta resolução • Formato A4 padrão

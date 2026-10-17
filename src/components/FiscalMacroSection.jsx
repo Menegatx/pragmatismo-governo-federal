@@ -70,8 +70,8 @@ export default function FiscalMacroSection() {
           Comparativo entre governos Bolsonaro e Lula 3 com base em dados do Tesouro Nacional (RTN) e Banco Central (SGS).
         </p>
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
+        <div className="overflow-x-auto -mx-1 sm:mx-0">
+          <table className="w-full min-w-[620px] text-left border-collapse">
             <thead>
               <tr className="border-b border-slate-800 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                 <th className="py-3 px-3">Exercício</th>

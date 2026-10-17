@@ -118,17 +118,15 @@ export default function EmendasParlamentaresSection() {
 
       </div>
 
-      {/* ========================================================================= */}
-      {/* NOVO BLOCO SOLICITADO: DISTRIBUIÇÃO POR ESPECTRO IDEOLÓGICO & PARTIDOS */}
-      {/* ========================================================================= */}
-      <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl mb-12">
-        <div className="max-w-3xl mb-8">
+      {/* NOVO BLOCO: DISTRIBUIÇÃO POR ESPECTRO IDEOLÓGICO & PARTIDOS */}
+      <div className="mt-10 sm:mt-14 p-4 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl mb-12">
+        <div className="max-w-3xl mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold mb-3">
             <PieChart className="w-3.5 h-3.5" />
             <span>Raio-X Ideológico & Partidário</span>
           </div>
 
-          <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <h3 className="text-lg sm:text-3xl font-extrabold text-white tracking-tight">
             Para Onde Foi o Dinheiro das Emendas? <br />
             <span className="text-cyan-400">Distribuição por Espectro Político e Partidos</span>
           </h3>
@@ -139,11 +137,13 @@ export default function EmendasParlamentaresSection() {
         </div>
 
         {/* 5 Cards de Indicadores por Espectro */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4 mb-8">
           {distribuicao_espectro.map((esp, i) => (
             <div
               key={i}
-              className={`p-4 rounded-xl bg-slate-950 border transition-all ${
+              className={`p-3 sm:p-4 rounded-xl bg-slate-950 border transition-all ${
+                i === 4 ? 'col-span-2 sm:col-span-1' : ''
+              } ${
                 esp.espectro === 'Centro-Direita'
                   ? 'border-sky-500/40 bg-sky-950/10'
                   : esp.espectro === 'Centro'
@@ -155,18 +155,18 @@ export default function EmendasParlamentaresSection() {
                   : 'border-red-500/40 bg-red-950/10'
               }`}
             >
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between mb-1.5">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                   {esp.espectro}
                 </span>
-                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: esp.cor }} />
+                <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: esp.cor }} />
               </div>
 
-              <div className="text-xl sm:text-2xl font-black text-white">
+              <div className="text-lg sm:text-2xl font-black text-white">
                 {esp.percentual}%
               </div>
 
-              <div className="text-xs font-mono font-bold text-slate-400 mt-1">
+              <div className="text-[11px] sm:text-xs font-mono font-bold text-slate-400 mt-0.5">
                 R$ {esp.valor_bi.toFixed(2)} Bi
               </div>
 
@@ -243,8 +243,8 @@ export default function EmendasParlamentaresSection() {
             </div>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+          <div className="overflow-x-auto -mx-1 sm:mx-0">
+            <table className="w-full min-w-[620px] text-left border-collapse">
               <thead>
                 <tr className="border-b border-slate-800 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                   <th className="py-2.5 px-3">Posição / Partido</th>
