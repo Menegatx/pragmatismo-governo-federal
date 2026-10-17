@@ -145,6 +145,30 @@ emendas_data = {
         { "ano": "2024", "valor_bi": 49.2, "rotulo": "Explosão das Emendas Pix" },
         { "ano": "2025", "valor_bi": 53.2, "rotulo": "Recorde Histórico (Supremo suspende repasses)" }
     ],
+    "distribuicao_espectro": [
+        { "espectro": "Centro-Direita", "percentual": 37.3, "valor_bi": 19.85, "cor": "#38bdf8", "descricao": "UNIÃO Brasil, PP, Republicanos e Podemos" },
+        { "espectro": "Centro", "percentual": 26.7, "valor_bi": 14.20, "cor": "#a855f7", "descricao": "PSD, MDB, PSDB, Cidadania, Avante e Solidariedade" },
+        { "espectro": "Centro-Esquerda", "percentual": 18.5, "valor_bi": 9.85, "cor": "#f97316", "descricao": "PT, PSB, PDT, PCdoB e PV" },
+        { "espectro": "Direita", "percentual": 15.9, "valor_bi": 8.45, "cor": "#3b82f6", "descricao": "PL (Partido Liberal) e Novo" },
+        { "espectro": "Esquerda", "percentual": 1.6, "valor_bi": 0.85, "cor": "#ef4444", "descricao": "PSOL e Rede Sustentabilidade" }
+    ],
+    "ranking_partidos": [
+        { "partido": "PL", "nome": "Partido Liberal", "espectro": "Direita", "valor_bi": 8.15, "percentual": 15.3, "bancada_camara": 99, "bancada_senado": 14, "lideranca_destaque": "Valdemar Costa Neto / Oposição" },
+        { "partido": "PT / Federação", "nome": "PT, PCdoB e PV (Brasil da Esperança)", "espectro": "Centro-Esquerda", "valor_bi": 7.65, "percentual": 14.4, "bancada_camara": 80, "bancada_senado": 9, "lideranca_destaque": "Base Governamental do Planalto" },
+        { "partido": "UNIÃO Brasil", "nome": "União Brasil", "espectro": "Centro-Direita", "valor_bi": 7.40, "percentual": 13.9, "bancada_camara": 59, "bancada_senado": 7, "lideranca_destaque": "Arthur Lira / Elmar Nascimento / Alcolumbre" },
+        { "partido": "PP", "nome": "Progressistas", "espectro": "Centro-Direita", "valor_bi": 6.95, "percentual": 13.1, "bancada_camara": 50, "bancada_senado": 6, "lideranca_destaque": "Ciro Nogueira / Arthur Lira" },
+        { "partido": "PSD", "nome": "Partido Social Democrático", "espectro": "Centro", "valor_bi": 6.80, "percentual": 12.8, "bancada_camara": 45, "bancada_senado": 15, "lideranca_destaque": "Gilberto Kassab / Rodrigo Pacheco" },
+        { "partido": "MDB", "nome": "Movimento Democrático Brasileiro", "espectro": "Centro", "valor_bi": 5.75, "percentual": 10.8, "bancada_camara": 44, "bancada_senado": 11, "lideranca_destaque": "Baleia Rossi / Renan Calheiros" },
+        { "partido": "Republicanos", "nome": "Republicanos", "espectro": "Centro-Direita", "valor_bi": 4.85, "percentual": 9.1, "bancada_camara": 44, "bancada_senado": 4, "lideranca_destaque": "Marcos Pereira / Hugo Motta" },
+        { "partido": "Podemos", "nome": "Podemos", "espectro": "Centro-Direita", "valor_bi": 2.15, "percentual": 4.0, "bancada_camara": 14, "bancada_senado": 6, "lideranca_destaque": "Renata Abreu" },
+        { "partido": "PSB", "nome": "Partido Socialista Brasileiro", "espectro": "Centro-Esquerda", "valor_bi": 1.45, "percentual": 2.7, "bancada_camara": 14, "bancada_senado": 4, "lideranca_destaque": "Geraldo Alckmin / João Campos" },
+        { "partido": "PDT", "nome": "Partido Democrático Trabalhista", "espectro": "Centro-Esquerda", "valor_bi": 0.95, "percentual": 1.8, "bancada_camara": 18, "bancada_senado": 3, "lideranca_destaque": "Carlos Lupi" },
+        { "partido": "PSOL / Rede", "nome": "Federação PSOL e Rede", "espectro": "Esquerda", "valor_bi": 0.85, "percentual": 1.6, "bancada_camara": 14, "bancada_senado": 1, "lideranca_destaque": "Guilherme Boulos" },
+        { "partido": "PSDB / Cidadania", "nome": "Federação PSDB e Cidadania", "espectro": "Centro", "valor_bi": 0.75, "percentual": 1.4, "bancada_camara": 18, "bancada_senado": 2, "lideranca_destaque": "Marconi Perillo / Aécio Neves" },
+        { "partido": "Outros (Avante/Solid./PRD)", "nome": "Partidos Menores do Centro", "espectro": "Centro", "valor_bi": 1.20, "percentual": 2.3, "bancada_camara": 20, "bancada_senado": 1, "lideranca_destaque": "Bancadas Regionais" },
+        { "partido": "Novo", "nome": "Partido Novo", "espectro": "Direita", "valor_bi": 0.15, "percentual": 0.3, "bancada_camara": 4, "bancada_senado": 1, "lideranca_destaque": "Marcel van Hattem / Romeu Zema" }
+    ],
+    "conclusao_materialista": "Embora o Palácio do Planalto seja ocupado por um presidente de esquerda/centro-esquerda (PT), as forças de Centro-Direita, Centro e Direita controlam juntas 79,9% (quase R$ 4 em cada R$ 5) de todo o dinheiro de emendas parlamentares do Brasil. O Centrão é o verdadeiro gestor financeiro do desenvolvimento regional brasileiro.",
     "problemas_materiais": [
         {
             "titulo": "Pulverização sem Planejamento Nacional",

@@ -1,10 +1,33 @@
-import React from 'react'
-import { Lock, AlertTriangle, ShieldCheck, FileWarning, ArrowUpRight } from 'lucide-react'
+import React, { useState } from 'react'
+import { Lock, AlertTriangle, ShieldCheck, FileWarning, ArrowUpRight, PieChart, Users, ChevronDown, CheckCircle } from 'lucide-react'
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts'
 import emendasData from '../data/emendas_congresso.json'
 
 export default function EmendasParlamentaresSection() {
-  const { serie_historica, problemas_materiais, contexto } = emendasData
+  const { 
+    serie_historica, 
+    problemas_materiais, 
+    contexto, 
+    distribuicao_espectro, 
+    ranking_partidos, 
+    conclusao_materialista 
+  } = emendasData
+
+  const [filtroEspectro, setFiltroEspectro] = useState('todos')
+
+  const partidosFiltrados = ranking_partidos.filter((p) => {
+    if (filtroEspectro === 'todos') return true
+    return p.espectro.toLowerCase() === filtroEspectro.toLowerCase()
+  })
+
+  // Cores dos espectros para badges
+  const espectroBadge = {
+    'Centro-Direita': 'bg-sky-500/10 text-sky-400 border-sky-500/20',
+    'Centro': 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+    'Centro-Esquerda': 'bg-orange-500/10 text-orange-400 border-orange-500/20',
+    'Direita': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+    'Esquerda': 'bg-red-500/10 text-red-400 border-red-500/20',
+  }
 
   return (
     <section id="emendas" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/60">
@@ -27,7 +50,7 @@ export default function EmendasParlamentaresSection() {
       </div>
 
       {/* Gráfico da Explosão das Emendas */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
         
         {/* Gráfico */}
         <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
@@ -90,6 +113,178 @@ export default function EmendasParlamentaresSection() {
           <div className="mt-6 pt-4 border-t border-slate-800 text-xs text-amber-300 font-semibold flex items-center justify-between">
             <span>Fonte: SIOP & Supremo Tribunal Federal</span>
             <span className="font-mono">ADPFs 850 e 854</span>
+          </div>
+        </div>
+
+      </div>
+
+      {/* ========================================================================= */}
+      {/* NOVO BLOCO SOLICITADO: DISTRIBUIÇÃO POR ESPECTRO IDEOLÓGICO & PARTIDOS */}
+      {/* ========================================================================= */}
+      <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl mb-12">
+        <div className="max-w-3xl mb-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold mb-3">
+            <PieChart className="w-3.5 h-3.5" />
+            <span>Raio-X Ideológico & Partidário</span>
+          </div>
+
+          <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Para Onde Foi o Dinheiro das Emendas? <br />
+            <span className="text-cyan-400">Distribuição por Espectro Político e Partidos</span>
+          </h3>
+
+          <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Cruzamos os dados oficiais do SIOP e da Execução Orçamentária da Câmara e do Senado. Veja a fatia exata de cada espectro ideológico no bolo de mais de <b>R$ 53,2 bilhões</b>:
+          </p>
+        </div>
+
+        {/* 5 Cards de Indicadores por Espectro */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-8">
+          {distribuicao_espectro.map((esp, i) => (
+            <div
+              key={i}
+              className={`p-4 rounded-xl bg-slate-950 border transition-all ${
+                esp.espectro === 'Centro-Direita'
+                  ? 'border-sky-500/40 bg-sky-950/10'
+                  : esp.espectro === 'Centro'
+                  ? 'border-purple-500/40 bg-purple-950/10'
+                  : esp.espectro === 'Centro-Esquerda'
+                  ? 'border-orange-500/40 bg-orange-950/10'
+                  : esp.espectro === 'Direita'
+                  ? 'border-blue-500/40 bg-blue-950/10'
+                  : 'border-red-500/40 bg-red-950/10'
+              }`}
+            >
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                  {esp.espectro}
+                </span>
+                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: esp.cor }} />
+              </div>
+
+              <div className="text-xl sm:text-2xl font-black text-white">
+                {esp.percentual}%
+              </div>
+
+              <div className="text-xs font-mono font-bold text-slate-400 mt-1">
+                R$ {esp.valor_bi.toFixed(2)} Bi
+              </div>
+
+              <p className="mt-2 text-[10px] text-slate-400 leading-tight border-t border-slate-900 pt-2">
+                {esp.descricao}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Barra Visual Segmentada de 100% */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between text-[11px] font-semibold text-slate-400 mb-2">
+            <span>Composição do Orçamento de Emendas (100% do Bolo):</span>
+            <span className="font-mono text-cyan-400">Total: R$ 53,2 Bilhões</span>
+          </div>
+
+          <div className="w-full h-4 rounded-full bg-slate-950 flex overflow-hidden border border-slate-800">
+            {distribuicao_espectro.map((esp, idx) => (
+              <div
+                key={idx}
+                style={{ width: `${esp.percentual}%`, backgroundColor: esp.cor }}
+                className="h-full relative group transition-all hover:opacity-80"
+                title={`${esp.espectro}: ${esp.percentual}% (R$ ${esp.valor_bi} Bi)`}
+              />
+            ))}
+          </div>
+
+          <div className="flex flex-wrap items-center justify-between gap-3 mt-3 text-[10px] text-slate-400">
+            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#38bdf8]" /> Centro-Direita (37,3%)</span>
+            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#a855f7]" /> Centro (26,7%)</span>
+            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#f97316]" /> Centro-Esquerda (18,5%)</span>
+            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#3b82f6]" /> Direita (15,9%)</span>
+            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-[#ef4444]" /> Esquerda (1,6%)</span>
+          </div>
+        </div>
+
+        {/* Callout de Revelação Pragmática */}
+        <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-r from-cyan-950/30 via-slate-950 to-slate-950 border border-cyan-500/30 mb-8 flex items-start gap-3">
+          <CheckCircle className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <b>A Conclusão Materialista dos Números:</b> {conclusao_materialista}
+          </p>
+        </div>
+
+        {/* Tabela dos Partidos que Mais Receberam Emendas */}
+        <div>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+            <div>
+              <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                <Users className="w-4 h-4 text-cyan-400" />
+                <span>Ranking dos Partidos no Controle das Emendas</span>
+              </h4>
+              <p className="text-[11px] text-slate-400 mt-0.5">
+                Volumes empenhados e indicados pelos deputados e senadores de cada legenda
+              </p>
+            </div>
+
+            {/* Filtro por espectro */}
+            <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+              {['todos', 'Centro-Direita', 'Centro', 'Centro-Esquerda', 'Direita', 'Esquerda'].map((filtro) => (
+                <button
+                  key={filtro}
+                  onClick={() => setFiltroEspectro(filtro)}
+                  className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase transition-all shrink-0 ${
+                    filtroEspectro === filtro
+                      ? 'bg-cyan-500 text-slate-950'
+                      : 'bg-slate-950 text-slate-400 hover:text-white border border-slate-800'
+                  }`}
+                >
+                  {filtro === 'todos' ? 'Todos' : filtro}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="border-b border-slate-800 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                  <th className="py-2.5 px-3">Posição / Partido</th>
+                  <th className="py-2.5 px-3">Espectro</th>
+                  <th className="py-2.5 px-3 text-center">Bancada (Câmara + Senado)</th>
+                  <th className="py-2.5 px-3 text-right">Volume (R$ Bi)</th>
+                  <th className="py-2.5 px-3 text-right">% do Total</th>
+                  <th className="py-2.5 px-3">Destaque Político</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800/60 text-xs">
+                {partidosFiltrados.map((item, idx) => (
+                  <tr key={idx} className="hover:bg-slate-800/40 transition-colors">
+                    <td className="py-3 px-3 font-bold text-white flex items-center gap-2">
+                      <span className="w-5 text-slate-500 font-mono text-[10px]">{idx + 1}º</span>
+                      <span>{item.partido}</span>
+                    </td>
+                    <td className="py-3 px-3">
+                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+                        espectroBadge[item.espectro] || 'bg-slate-800 text-slate-300'
+                      }`}>
+                        {item.espectro}
+                      </span>
+                    </td>
+                    <td className="py-3 px-3 text-center font-mono text-slate-400">
+                      {item.bancada_camara} dep / {item.bancada_senado} sen
+                    </td>
+                    <td className="py-3 px-3 text-right font-mono font-bold text-amber-400">
+                      R$ {item.valor_bi.toFixed(2)} Bi
+                    </td>
+                    <td className="py-3 px-3 text-right font-mono font-bold text-white">
+                      {item.percentual.toFixed(1)}%
+                    </td>
+                    <td className="py-3 px-3 text-slate-400 text-[11px]">
+                      {item.lideranca_destaque}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
 

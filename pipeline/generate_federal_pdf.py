@@ -301,41 +301,70 @@ def build_pdf():
     # =========================================================================
     # PÁGINA 5: O "SEQUESTRO" DO ORÇAMENTO PELO CENTRÃO
     # =========================================================================
-    story.append(Paragraph("5. Emendas Parlamentares e o 'Sequestro' do Orçamento", style_h1))
+    story.append(Paragraph("5. Emendas Parlamentares: Espectro Político e o Sequestro do Orçamento", style_h1))
     story.append(Paragraph(
-        "Nenhum diagnóstico do Governo Federal é honesto sem expor a fratura institucional no controle das verbas públicas: o Poder Executivo perdeu progressivamente o poder de alocação orçamentária para o Congresso Nacional.",
+        "Nenhum diagnóstico do Governo Federal é honesto sem expor a fratura institucional no controle das verbas públicas: o Poder Executivo perdeu progressivamente o poder de alocação orçamentária para o Congresso Nacional (mais de <b>R$ 53,2 bilhões</b>).",
         style_body
     ))
-    story.append(Spacer(1, 0.4 * cm))
+    story.append(Spacer(1, 0.3 * cm))
 
-    em_rows = [
-        [Paragraph("Ano de Referência", style_th), Paragraph("Volume de Emendas", style_th), Paragraph("Marco Institucional / Modelo de Repasse", style_th)]
+    # Tabela de Espectro Político (Os 5 Blocos Solicitados)
+    story.append(Paragraph("<b>Divisão das Emendas por Espectro Político (100% do Bolo):</b>", style_h2))
+    esp_rows = [
+        [Paragraph("Espectro Ideológico", style_th), Paragraph("% do Total", style_th), Paragraph("Volume (R$ Bi)", style_th), Paragraph("Partidos Integrantes do Bloco", style_th)]
     ]
-    for em in emendas["serie_historica"]:
-        em_rows.append([
-            Paragraph(em["ano"], style_td_bold),
-            Paragraph(f"<b>R$ {em['valor_bi']:.1f} Bilhões</b>", style_td),
-            Paragraph(em["rotulo"], style_td)
+    for esp in emendas["distribuicao_espectro"]:
+        esp_rows.append([
+            Paragraph(f"<b>{esp['espectro']}</b>", style_td_bold),
+            Paragraph(f"<b>{esp['percentual']}%</b>", style_td),
+            Paragraph(f"R$ {esp['valor_bi']:.2f} Bi", style_td),
+            Paragraph(esp["descricao"], style_td)
         ])
-    t_em = Table(em_rows, colWidths=[3.5*cm, 4.0*cm, 9.5*cm])
-    t_em.setStyle(TableStyle([
+    t_esp = Table(esp_rows, colWidths=[4.0*cm, 2.5*cm, 3.0*cm, 7.5*cm])
+    t_esp.setStyle(TableStyle([
+        ('BACKGROUND', (0,0), (-1,0), colors.HexColor("#0f172a")),
+        ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, colors.HexColor("#f8fafc")]),
+        ('GRID', (0,0), (-1,-1), 0.5, colors.HexColor("#cbd5e1")),
+        ('ALIGN', (1,1), (2,-1), 'CENTER'),
+        ('TOPPADDING', (0,0), (-1,-1), 3),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
+    ]))
+    story.append(t_esp)
+
+    story.append(Spacer(1, 0.4 * cm))
+    story.append(Paragraph("<b>Ranking dos Partidos que Mais Receberam Recursos de Emendas:</b>", style_h2))
+    part_rows = [
+        [Paragraph("Pos.", style_th), Paragraph("Partido / Legenda", style_th), Paragraph("Espectro", style_th), Paragraph("Bancada", style_th), Paragraph("Valor (R$ Bi)", style_th), Paragraph("%", style_th)]
+    ]
+    for idx, p in enumerate(emendas["ranking_partidos"][:8]):  # Top 8 principais partidos
+        part_rows.append([
+            Paragraph(f"{idx+1}º", style_td),
+            Paragraph(f"<b>{p['partido']}</b>", style_td_bold),
+            Paragraph(p["espectro"], style_td),
+            Paragraph(f"{p['bancada_camara']} dep / {p['bancada_senado']} sen", style_td),
+            Paragraph(f"<b>R$ {p['valor_bi']:.2f} Bi</b>", style_td),
+            Paragraph(f"{p['percentual']}%", style_td)
+        ])
+    t_part = Table(part_rows, colWidths=[1.2*cm, 4.5*cm, 3.3*cm, 3.5*cm, 2.8*cm, 1.7*cm])
+    t_part.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,0), colors.HexColor("#78350f")),
         ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, colors.HexColor("#fef3c7")]),
         ('GRID', (0,0), (-1,-1), 0.5, colors.HexColor("#fde68a")),
-        ('TOPPADDING', (0,0), (-1,-1), 5),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 5),
+        ('ALIGN', (0,1), (0,-1), 'CENTER'),
+        ('ALIGN', (3,1), (-1,-1), 'CENTER'),
+        ('TOPPADDING', (0,0), (-1,-1), 3),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
     ]))
-    story.append(t_em)
+    story.append(t_part)
 
-    story.append(Spacer(1, 0.6 * cm))
-    story.append(Paragraph("As 3 Deformações Materiais das Emendas Impositivas:", style_h2))
-    for prob in emendas["problemas_materiais"]:
-        story.append(Paragraph(f"• <b>{prob['titulo']}</b>: {prob['descricao']}", style_body))
-        story.append(Spacer(1, 0.2 * cm))
-
-    story.append(Spacer(1, 0.4 * cm))
+    story.append(Spacer(1, 0.35 * cm))
     story.append(Paragraph(
-        "<b>Conclusão Institucional:</b> Em 2024, a intervenção do Supremo Tribunal Federal (decisões do Min. Flávio Dino) paralisando as 'Emendas Pix' colocou freio na sangria e exigiu transparência de destinação. No entanto, o custo político para o Executivo governar sem ceder bilhões a líderes partidários continua sendo um dos maiores entraves do país.",
+        f"<b>A Revelação Materialista:</b> {emendas['conclusao_materialista']}",
+        style_callout
+    ))
+    story.append(Spacer(1, 0.25 * cm))
+    story.append(Paragraph(
+        "<b>As Deformações das 'Emendas Pix':</b> Repasses diretos sem convênio prévio nem plano de trabalho aprovado geraram a intervenção histórica do STF (decisão do Min. Flávio Dino nas ADPFs 850 e 854), condicionando a liberação de recursos a regras rígidas de transparência e rastreabilidade pelo TCU.",
         style_body
     ))
     story.append(PageBreak())
