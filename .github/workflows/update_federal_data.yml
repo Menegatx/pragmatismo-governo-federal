@@ -1,0 +1,47 @@
+name: Atualizacao Diaria dos Dados Federais e Dossie PDF
+
+on:
+  schedule:
+    # Executa todos os dias às 03:00 UTC (00:00 Horário de Brasília)
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Permite disparo manual via interface do GitHub
+
+jobs:
+  update-federal-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar Dependências do Pipeline
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests reportlab pillow
+
+      - name: Sincronizar Dados Oficiais do Governo Federal
+        run: |
+          python pipeline/fetch_federal_data.py
+
+      - name: Compilar Dossiê Cívico Federal em PDF (8 Páginas)
+        run: |
+          python pipeline/generate_federal_pdf.py
+
+      - name: Commit e Push das Atualizações
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/ public/dossie-auditoria-governo-federal.pdf
+          if git diff --staged --quiet; then
+            echo "Nenhuma alteração nos dados do Governo Federal hoje."
+          else
+            git commit -m "chore(data): sincronizacao diaria das contas federais e dossie PDF [skip ci]"
+            git push origin main
+          fi

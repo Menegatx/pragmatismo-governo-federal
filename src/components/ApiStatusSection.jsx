@@ -1,5 +1,5 @@
 import React from 'react'
-import { Database, FileText, Download, CheckCircle, Shield, RefreshCw } from 'lucide-react'
+import { Database, FileText, Download, CheckCircle, Shield, RefreshCw, ArrowUpRight } from 'lucide-react'
 
 export default function ApiStatusSection() {
   return (
@@ -75,9 +75,24 @@ export default function ApiStatusSection() {
                   Transparência Ativa
                 </span>
               </div>
-              <p className="text-[11px] text-slate-400 leading-relaxed">
+              <p className="text-[11px] text-slate-400 leading-relaxed mb-3">
                 A plataforma foi desenvolvida com código aberto e pipelines de dados verificáveis, garantindo que qualquer cidadão, jornalista ou acadêmico possa reproduzir os cálculos sem distorções.
               </p>
+              <div className="flex items-center justify-between pt-2.5 border-t border-slate-900 text-[11px]">
+                <span className="text-slate-400 flex items-center gap-1.5">
+                  <Shield className="w-3.5 h-3.5 text-emerald-400" />
+                  Código e metodologia 100% públicos
+                </span>
+                <a
+                  href="https://github.com/Menegatx/pragmatismo-governo-federal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                >
+                  <span>Auditar no GitHub</span>
+                  <ArrowUpRight className="w-3 h-3" />
+                </a>
+              </div>
             </div>
           </div>
 
